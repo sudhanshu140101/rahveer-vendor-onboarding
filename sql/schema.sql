@@ -22,5 +22,3 @@ CREATE TABLE IF NOT EXISTS admins (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO admins (username, password_hash) VALUES ('rahveer_admin', '$2y$10$G/2c3v9/8SU1U3g1msDI..BWQmlMe1m0LWMN1JWCgyGXyPXcaPn0.')
-ON DUPLICATE KEY UPDATE username = username;
