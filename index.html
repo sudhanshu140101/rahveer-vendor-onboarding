@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAHVEER – Zero Accident Bharat | Vendor Onboarding</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0a1628',
+            'navy-light': '#1a2d4a',
+            'bharat-orange': '#ff6b35',
+            'bharat-orange-dark': '#e55a2b',
+            'safety-green': '#22c55e',
+            'safety-green-dark': '#16a34a'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    html, body { height: 100%; margin: 0; }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.4); }
+      50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.6); }
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+    .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    
+    .shimmer-btn {
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2s infinite;
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0a1628 100%);
+    }
+    
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+    }
+    
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #ff6b35;
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+    }
+
+    .success-toast {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full bg-white overflow-auto">
+  <div id="app-wrapper" class="w-full min-h-full"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 sm:h-20">
+      <div class="flex items-center gap-3">
+       <img src="images/rahveer-logo.png" alt="RAHVEER" class="h-10 w-auto sm:h-12 object-contain">
+       <div>
+        <h1 class="text-white font-bold text-lg sm:text-xl tracking-tight">RAHVEER</h1>
+        <p class="text-orange-400 text-xs font-medium -mt-1 hidden sm:block">Zero Accident Bharat</p>
+       </div>
+      </div><a href="#register-form" class="bg-bharat-orange hover:bg-bharat-orange-dark text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-orange-500/25"> Join Now </a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section class="hero-gradient relative overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16"><!-- Decorative blobs -->
+    <div class="blob w-96 h-96 bg-bharat-orange -top-48 -right-48"></div>
+    <div class="blob w-72 h-72 bg-safety-green bottom-0 -left-36"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+       <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20"><span class="w-2 h-2 bg-safety-green rounded-full animate-pulse"></span> <span class="text-white/90 text-sm font-medium">India's #1 Roadside Assistance Network</span>
+       </div>
+       <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">Grow Your Business<br><span class="gradient-text">With Rahveer</span></h1>
+       <p id="hero-subheading" class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">Join India's trusted roadside assistance network and receive regular service leads in your area.</p>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"><a href="#register-form" id="register-btn" class="relative overflow-hidden bg-bharat-orange hover:bg-bharat-orange-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/30 animate-pulse-glow flex items-center justify-center gap-2"> <span class="shimmer-btn absolute inset-0"></span> <span class="relative">Register Now</span>
+         <svg class="w-5 h-5 relative" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+         </svg></a> <a href="https://wa.me/919422517869" target="_blank" rel="noopener noreferrer" class="bg-safety-green hover:bg-safety-green-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-green-500/30 flex items-center justify-center gap-2" aria-label="Chat on WhatsApp">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+         Chat </a>
+       </div><!-- Trust Badges -->
+       <div class="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
+        <div class="flex items-center gap-2 text-white/80">
+         <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span class="text-sm font-medium">Verified Platform</span>
+        </div>
+        <div class="flex items-center gap-2 text-white/80">
+         <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span class="text-sm font-medium">Weekly Payouts</span>
+        </div>
+        <div class="flex items-center gap-2 text-white/80">
+         <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span class="text-sm font-medium">24/7 Support</span>
+        </div>
+       </div>
+      </div><!-- Hero Illustration -->
+      <div class="hidden lg:block relative">
+       <div class="animate-float">
+        <div class="relative w-full max-w-lg mx-auto"><!-- Main illustration card -->
+         <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+          <div class="flex items-center gap-4 mb-6">
+           <div class="w-16 h-16 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+           </div>
+           <div>
+            <h3 class="text-white font-bold text-xl">Verified Partner</h3>
+            <p class="text-gray-400 text-sm">Trusted by 10,000+ vendors</p>
+           </div>
+          </div><!-- Stats -->
+          <div class="grid grid-cols-2 gap-4">
+           <div class="bg-white/5 rounded-xl p-4 text-center">
+            <p class="text-3xl font-bold text-bharat-orange">₹50K+</p>
+            <p class="text-gray-400 text-sm">Avg. Monthly Earning</p>
+           </div>
+           <div class="bg-white/5 rounded-xl p-4 text-center">
+            <p class="text-3xl font-bold text-safety-green">500+</p>
+            <p class="text-gray-400 text-sm">Cities Covered</p>
+           </div>
+          </div>
+         </div><!-- Floating notification -->
+         <div class="absolute -right-4 top-1/4 bg-white rounded-2xl p-4 shadow-2xl animate-bounce">
+          <div class="flex items-center gap-3">
+           <div class="w-10 h-10 bg-safety-green/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20">
+                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 
+                8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 
+                0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" /> 
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 
+                6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 
+                1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 
+                14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 
+                0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+            </svg>
+           </div>
+           <div>
+            <p class="text-navy font-semibold text-sm">New Request!</p>
+            <p class="text-gray-500 text-xs">Tyre puncture - 2km away</p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator hidden sm:block">
+     <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+     </svg>
+    </div>
+   </section><!-- Why Join Section -->
+   <section class="py-10 sm:py-14 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-8 sm:mb-10"><span class="inline-block bg-bharat-orange/10 text-bharat-orange px-4 py-2 rounded-full text-sm font-semibold mb-4">WHY RAHVEER?</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">Why Join Rahveer?</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Unlock new opportunities and grow your business with India's fastest-growing roadside assistance network</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"><!-- Benefit Card 1 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">Get Regular Service Requests</h3>
+       <p class="text-gray-600">Receive consistent service leads from customers in your area. Never worry about finding work again.</p>
+      </div><!-- Benefit Card 2 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-safety-green to-emerald-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-green-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">Increase Monthly Income</h3>
+       <p class="text-gray-600">Earn ₹30,000 - ₹80,000+ monthly based on your service quality and availability.</p>
+      </div><!-- Benefit Card 3 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">Expand Customer Base</h3>
+       <p class="text-gray-600">Connect with new customers you would never reach otherwise. Build lasting relationships.</p>
+      </div><!-- Benefit Card 4 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">No Heavy Investment</h3>
+       <p class="text-gray-600">Start with what you have. No franchise fees, no hidden charges. Just your skills and dedication.</p>
+      </div><!-- Benefit Card 5 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">Digital Profile &amp; Ratings</h3>
+       <p class="text-gray-600">Build your online reputation with customer reviews. Higher ratings mean more requests!</p>
+      </div><!-- Benefit Card 6 -->
+      <div class="card-hover bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+       <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        </svg>
+       </div>
+       <h3 class="text-xl font-bold text-navy mb-3">Weekly Secure Payouts</h3>
+       <p class="text-gray-600">Get paid every week directly to your bank account. Transparent tracking of all earnings.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section class="py-10 sm:py-14 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-8 sm:mb-10"><span class="inline-block bg-bharat-orange/10 text-bharat-orange px-4 py-2 rounded-full text-sm font-semibold mb-4">SUCCESS STORIES</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">What Our Partners Say</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Real stories from vendors who transformed their income with Rahveer</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"><!-- Testimonial 1 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         RJ
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Rajesh Joshi</h3>
+         <p class="text-gray-500 text-sm">Auto Mechanic, Delhi</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"I was earning ₹15,000 monthly before Rahveer. Now I consistently make ₹55,000+ every month! The platform is transparent and payouts are always on time."</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-bharat-orange">₹55K/month</span> <span>8 months</span>
+       </div>
+      </div><!-- Testimonial 2 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-safety-green to-emerald-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         PS
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Priya Singh</h3>
+         <p class="text-gray-500 text-sm">Tyre Dealer, Bangalore</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"As a woman entrepreneur, Rahveer gave me the confidence to scale my business. I started with 2 services per day and now handle 6-7 requests daily!"</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-safety-green">₹60K/month</span> <span>6 months</span>
+       </div>
+      </div><!-- Testimonial 3 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         AK
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Amit Kumar</h3>
+         <p class="text-gray-500 text-sm">Wheel Alignment, Mumbai</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"Rahveer changed my life completely. From struggling to get 2 customers a week, I now have more work than I can handle. Highly recommended!"</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-blue-500">₹70K/month</span> <span>12 months</span>
+       </div>
+      </div><!-- Testimonial 4 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         VD
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Vikram Desai</h3>
+         <p class="text-gray-500 text-sm">Emergency Services, Pune</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"The support team is amazing! I had some concerns initially but they walked me through everything. Now earning more than ever before!"</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-purple-500">₹50K/month</span> <span>4 months</span>
+       </div>
+      </div><!-- Testimonial 5 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         MN
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Meera Nair</h3>
+         <p class="text-gray-500 text-sm">Mechanic, Chennai</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"Started from zero customers. Today I earn ₹50K+ monthly and have a 4.8-star rating. This platform truly rewards hard work!"</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-pink-500">₹50K/month</span> <span>7 months</span>
+       </div>
+      </div><!-- Testimonial 6 -->
+      <div class="card-hover bg-gray-50 rounded-2xl p-6 sm:p-8 shadow border border-gray-200 hover:shadow-lg">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
+         RS
+        </div>
+        <div class="flex-1">
+         <h3 class="font-bold text-navy text-lg">Rajat Singh</h3>
+         <p class="text-gray-500 text-sm">Tyre Specialist, Hyderabad</p>
+         <div class="flex items-center gap-1 mt-2">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewbox="0 0 20 20">
+           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-700 mb-4 text-sm">"Best decision ever! I was skeptical at first but after seeing my first payment, I knew this was real. Best platform for vendors!"</p>
+       <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-300"><span class="font-semibold text-cyan-500">₹65K/month</span> <span>10 months</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Who Can Join Section -->
+   <section class="py-10 sm:py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-8 sm:mb-10"><span class="inline-block bg-safety-green/10 text-safety-green px-4 py-2 rounded-full text-sm font-semibold mb-4">PARTNER CATEGORIES</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">Who Can Join?</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We welcome all roadside service professionals across India</p>
+     </div>
+     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"><!-- Category 1 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Mechanics</h3>
+       <p class="text-gray-500 text-sm">Auto repair &amp; maintenance experts</p>
+      </div><!-- Category 2 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Wheel Alignment</h3>
+       <p class="text-gray-500 text-sm">Precision alignment services</p>
+      </div><!-- Category 3 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" viewbox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="2" /> <circle cx="12" cy="12" r="5" stroke-width="2" /> <circle cx="12" cy="12" r="1" fill="currentColor" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Tyre Dealers</h3>
+       <p class="text-gray-500 text-sm">Tyre sales &amp; puncture repair</p>
+      </div><!-- Category 4 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Drivers</h3>
+       <p class="text-gray-500 text-sm">On-call driving assistance</p>
+      </div><!-- Category 5 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Medical Support</h3>
+       <p class="text-gray-500 text-sm">First aid &amp; emergency care</p>
+      </div><!-- Category 6 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Legal Advisors</h3>
+       <p class="text-gray-500 text-sm">Accident claim assistance</p>
+      </div><!-- Category 7 -->
+      <div class="card-hover bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+       <div class="w-16 h-16 bg-navy/5 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-navy" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m0 0v10l8 4" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy mb-2">Loading Services</h3>
+       <p class="text-gray-500 text-sm">Goods loading &amp; unloading</p>
+      </div><!-- Category 8 - Join Us -->
+      <div class="card-hover bg-gradient-to-br from-bharat-orange/10 to-orange-50 rounded-2xl p-6 text-center border border-bharat-orange/20 shadow-sm">
+       <div class="w-16 h-16 bg-bharat-orange/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-bharat-orange" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-bharat-orange mb-2">And More!</h3>
+       <p class="text-gray-500 text-sm">Other roadside services</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- How It Works Section -->
+   <section class="py-10 sm:py-14 bg-navy relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-bharat-orange -top-48 -left-48"></div>
+    <div class="blob w-72 h-72 bg-safety-green -bottom-36 -right-36"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="text-center mb-8 sm:mb-10"><span class="inline-block bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">EASY PROCESS</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">How It Works</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">Get started in 4 simple steps and start earning within days</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"><!-- Step 1 -->
+      <div class="relative">
+       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-white/20 text-center h-full">
+        <div class="w-14 h-14 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg shadow-orange-500/30">
+         1
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Register Online</h3>
+        <p class="text-gray-300">Fill the simple registration form with your basic details and service information.</p>
+       </div>
+       <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white/30">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+       </div>
+      </div><!-- Step 2 -->
+      <div class="relative">
+       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-white/20 text-center h-full">
+        <div class="w-14 h-14 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg shadow-orange-500/30">
+         2
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Submit Documents</h3>
+        <p class="text-gray-300">Upload your ID proof, business documents, and skill certificates for verification.</p>
+       </div>
+       <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white/30">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+       </div>
+      </div><!-- Step 3 -->
+      <div class="relative">
+       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-white/20 text-center h-full">
+        <div class="w-14 h-14 bg-gradient-to-br from-safety-green to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg shadow-green-500/30">
+         3
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Get Verified</h3>
+        <p class="text-gray-300">Our team reviews your application and verifies your credentials within 48 hours.</p>
+       </div>
+       <div class="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-white/30">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+       </div>
+      </div><!-- Step 4 -->
+      <div class="relative">
+       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-white/20 text-center h-full">
+        <div class="w-14 h-14 bg-gradient-to-br from-safety-green to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-2xl shadow-lg shadow-green-500/30">
+         4
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Start Earning</h3>
+        <p class="text-gray-300">Go live on the platform and start receiving service requests immediately!</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Earnings Section -->
+   <section class="py-10 sm:py-14 bg-gradient-to-br from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div><span class="inline-block bg-bharat-orange/10 text-bharat-orange px-4 py-2 rounded-full text-sm font-semibold mb-4">EARNING POTENTIAL</span>
+       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-6">Earn More <span class="gradient-text">Every Month</span></h2>
+       <p class="text-gray-600 text-lg mb-8">Our top-performing partners earn ₹80,000+ per month. Your income depends on your availability and service quality.</p>
+       <div class="space-y-4">
+        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+         <div class="w-12 h-12 bg-bharat-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-bharat-orange" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-bold text-navy mb-1">3-5 Service Requests Per Day</h4>
+          <p class="text-gray-500 text-sm">Based on your location and availability window</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+         <div class="w-12 h-12 bg-safety-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-safety-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-bold text-navy mb-1">Commission Based Model</h4>
+          <p class="text-gray-500 text-sm">Transparent pricing with competitive commission rates</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+         <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-bold text-navy mb-1">Bonus for High Ratings</h4>
+          <p class="text-gray-500 text-sm">Earn extra incentives for maintaining 4.5+ star ratings</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Earnings Illustration -->
+      <div class="relative">
+       <div class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+        <div class="text-center mb-8">
+         <p class="text-gray-500 text-sm mb-2">Average Monthly Earnings</p>
+         <p class="text-5xl sm:text-6xl font-bold gradient-text">₹50,000+</p>
+        </div>
+        <div class="space-y-4">
+         <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"><span class="text-gray-600">Beginner (1-3 months)</span> <span class="font-bold text-navy">₹20,000 - ₹35,000</span>
+         </div>
+         <div class="flex justify-between items-center p-3 bg-bharat-orange/10 rounded-xl border border-bharat-orange/20"><span class="text-gray-600">Regular (3-6 months)</span> <span class="font-bold text-bharat-orange">₹35,000 - ₹55,000</span>
+         </div>
+         <div class="flex justify-between items-center p-3 bg-safety-green/10 rounded-xl border border-safety-green/20"><span class="text-gray-600">Pro Partner (6+ months)</span> <span class="font-bold text-safety-green">₹55,000 - ₹80,000+</span>
+         </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+         <p class="text-gray-500 text-sm">*Earnings vary based on location, availability, and service quality</p>
+        </div>
+       </div><!-- Decorative elements -->
+       <div class="absolute -top-4 -right-4 w-24 h-24 bg-bharat-orange/10 rounded-full blur-2xl"></div>
+       <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-safety-green/10 rounded-full blur-2xl"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Trust & Safety Section -->
+   <section class="py-10 sm:py-14 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-8 sm:mb-10"><span class="inline-block bg-navy/10 text-navy px-4 py-2 rounded-full text-sm font-semibold mb-4">TRUST &amp; SAFETY</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">Your Security is Our Priority</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We've built a platform that protects both vendors and customers</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div class="card-hover text-center p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/20">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy text-lg mb-3">Verified Vendor Badge</h3>
+       <p class="text-gray-500 text-sm">Get a verified badge that builds customer trust and increases your service requests.</p>
+      </div>
+      <div class="card-hover text-center p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-safety-green to-emerald-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/20">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy text-lg mb-3">Transparent Commission</h3>
+       <p class="text-gray-500 text-sm">Clear pricing structure with no hidden fees. Know exactly what you earn on every job.</p>
+      </div>
+      <div class="card-hover text-center p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/20">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy text-lg mb-3">Secure Digital Payments</h3>
+       <p class="text-gray-500 text-sm">Bank-grade security for all transactions. Weekly payouts directly to your account.</p>
+      </div>
+      <div class="card-hover text-center p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100">
+       <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-500/20">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-navy text-lg mb-3">Dedicated Support</h3>
+       <p class="text-gray-500 text-sm">24/7 vendor support team to help you with any issues or questions.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Registration Form Section -->
+   <section id="register-form" class="py-10 sm:py-14 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden">
+    <div class="blob w-96 h-96 bg-bharat-orange -top-48 right-0"></div>
+    <div class="blob w-72 h-72 bg-safety-green bottom-0 left-0"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="text-center mb-8"><span class="inline-block bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">START NOW</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Become a Rahveer Partner</h2>
+      <p class="text-gray-300 text-lg">Fill the form below and our team will contact you within 24 hours</p>
+     </div>
+     <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl">
+      <form id="registration-form" class="space-y-6">
+       <div class="grid sm:grid-cols-2 gap-6">
+        <div><label for="name" class="block text-sm font-semibold text-navy mb-2">Full Name *</label> <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-bharat-orange transition-all duration-300" placeholder="Enter your full name">
+        </div>
+        <div><label for="shop_name" class="block text-sm font-semibold text-navy mb-2">Shop/Business Name *</label> <input type="text" id="shop_name" name="shop_name" required class="form-input w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-bharat-orange transition-all duration-300" placeholder="Enter your shop name">
+        </div>
+       </div>
+       <div class="grid sm:grid-cols-2 gap-6">
+        <div><label for="mobile" class="block text-sm font-semibold text-navy mb-2">Mobile Number *</label> <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric" class="form-input w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-bharat-orange transition-all duration-300" placeholder="Enter 10-digit mobile number">
+        </div>
+        <div><label for="city" class="block text-sm font-semibold text-navy mb-2">City *</label> <input type="text" id="city" name="city" required class="form-input w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-bharat-orange transition-all duration-300" placeholder="Enter your city">
+        </div>
+       </div>
+       <div><label for="service_type" class="block text-sm font-semibold text-navy mb-2">Service Type *</label> <select id="service_type" name="service_type" required class="form-input w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-bharat-orange transition-all duration-300 bg-white"> <option value="">Select your service type</option> <option value="mechanic">Mechanic</option> <option value="wheel_alignment">Wheel Alignment Shop</option> <option value="tyre_dealer">Tyre Dealer</option> <option value="driver">Driver</option> <option value="medical_support">Medical Support Provider</option> <option value="legal_advisor">Legal Advisor</option> <option value="loading_service">Loading/Hammal Service</option> <option value="other">Other</option> </select>
+       </div>
+       <div class="bg-gray-50 rounded-xl p-6 border-2 border-dashed border-gray-200 text-center cursor-pointer hover:border-bharat-orange/50 transition-colors" id="document-upload-area">
+        <label for="document_upload" class="block cursor-pointer">
+         <input type="file" id="document_upload" name="document" accept=".jpg,.jpeg,.png,image/jpeg,image/png" class="hidden">
+         <svg class="w-12 h-12 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+         <p class="text-gray-600 mb-2">Click here to upload document (optional)</p>
+         <p class="text-gray-400 text-sm">JPG or PNG only, max 5 MB. ID Proof, Business License, Skill Certificates.</p>
+        </label>
+        <p id="document_file_name" class="text-sm text-navy font-medium mt-2 hidden"></p>
+        <p id="document_error" class="text-sm text-red-500 mt-1 hidden"></p>
+       </div>
+       <div class="flex items-start gap-3"><input type="checkbox" id="terms" required class="w-5 h-5 rounded border-gray-300 text-bharat-orange focus:ring-bharat-orange mt-0.5"> <label for="terms" class="text-sm text-gray-600"> I agree to the <a href="#" 
+        class="text-bharat-orange hover:underline">Terms &amp; Conditions</a> and <a href="#" 
+        class="text-bharat-orange hover:underline">Privacy Policy</a> of Rahveer </label>
+       </div><button type="submit" id="submit-btn" class="w-full relative overflow-hidden bg-gradient-to-r from-bharat-orange to-orange-500 
+       hover:from-bharat-orange-dark hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/30 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"> 
+        <span class="shimmer-btn absolute inset-0"></span> <span id="btn-text" class="relative">Become a Rahveer Partner</span>
+        <svg id="btn-arrow" class="w-5 h-5 relative" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+        <svg id="btn-spinner" class="w-5 h-5 relative hidden animate-spin" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" /> <path class="opacity-75" fill="currentColor" 
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        </svg></button>
+      </form><!-- Success Message -->
+      <div id="success-message" class="hidden text-center py-8">
+       <div class="w-20 h-20 bg-safety-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-10 h-10 text-safety-green" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <h3 class="text-2xl font-bold text-navy mb-2">Registration Successful! 🎉</h3>
+       <p class="text-gray-600 mb-6">Thank you for registering. Our team will contact you within 24 hours.</p><button id="register-another" class="text-bharat-orange font-semibold hover:underline">Register another partner →</button>
+      </div>
+     </div>
+    </div>
+   </section><!-- Closing Section -->
+   <section class="py-10 sm:py-14 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-bharat-orange/5 to-safety-green/5"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+     <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-bharat-orange to-orange-400 rounded-full mb-8 shadow-2xl shadow-orange-500/30">
+      <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+     </div>
+     <h2 id="closing-headline" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-6 leading-tight">Be Part of India's<br><span class="gradient-text">Zero Accident Bharat Mission</span></h2>
+     <p id="closing-subheading" class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Together, let's build the safest road network in India. Join thousands of partners already making a difference.</p>
+     <a href="#register-form" class="inline-flex items-center gap-3
+      bg-gradient-to-r from-bharat-orange to-orange-500 hover:from-bharat-orange-dark hover:to-orange-600 text-white px-10 py-5 rounded-full font-bold text-xl 
+     transition-all duration-300 shadow-2xl hover:shadow-orange-500/40 animate-pulse-glow"> <span>Join Now</span>
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg></a>
+     <div class="mt-12 flex flex-wrap justify-center gap-8 text-gray-500">
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+       </svg><span>10,000+ Partners</span>
+      </div>
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+       </svg><span>500+ Cities</span>
+      </div>
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-safety-green" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+       </svg><span>1M+ Services Completed</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-navy py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+       <img src="images/rahveer-logo.png" alt="RAHVEER" class="h-10 w-auto object-contain">
+       <div>
+        <h3 class="text-white font-bold">RAHVEER</h3>
+        <p class="text-orange-400 text-xs">Zero Accident Bharat</p>
+       </div>
+      </div>
+      <p class="text-gray-400 text-sm text-center">© 2024 Rahveer. All rights reserved. Made with ❤️ in India</p>
+      <div class="flex items-center gap-4">
+        <a href="https://www.facebook.com/profile.php?id=61586849922867" 
+        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 
+            1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg></a> 
+        <a href="https://www.instagram.com/rahveerofficial/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 
+            1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 
+            0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 
+            1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 
+            1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 
+            6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 
+            1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg></a> 
+        <a href="https://x.com/rahveerofficial"
+        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+        <svg class="w-6 h-6" fill="currentColor" 
+        viewbox="0 0 24 24">
+        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </footer><!-- Toast Notification Container -->
+   <div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_headline: 'Grow Your Business With Rahveer',
+      hero_subheading: "Join India's trusted roadside assistance network and receive regular service leads in your area.",
+      register_button_text: 'Register Now',
+      closing_headline: "Be Part of India's Zero Accident Bharat Mission",
+      closing_subheading: "Together, let's build the safest road network in India. Join thousands of partners already making a difference.",
+      primary_color: '#0a1628',
+      secondary_color: '#ff6b35',
+      accent_color: '#22c55e',
+      text_color: '#374151',
+      background_color: '#ffffff'
+    };
+
+    let config = { ...defaultConfig };
+
+    // Toast notification function
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `success-toast flex items-center gap-3 px-6 py-4 rounded-xl shadow-2xl ${
+        type === 'success' ? 'bg-safety-green text-white' : 'bg-red-500 text-white'
+      }`;
+      const icon = type === 'success'
+        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>'
+        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+      toast.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">${icon}</svg><span class="font-medium"></span>`;
+      toast.querySelector('span').textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    // Data SDK handler
+    const dataHandler = {
+      onDataChanged(data) {
+        // Write-only form - no need to display data
+      }
+    };
+
+    // Initialize Data SDK
+    async function initDataSDK() {
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) {
+          console.error('Failed to initialize Data SDK');
+        }
+      }
+    }
+
+    // Element SDK functions
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+      
+      // Update hero section
+      const heroHeadline = document.getElementById('hero-headline');
+      if (heroHeadline) {
+        heroHeadline.innerHTML = `${config.hero_headline.split(' ').slice(0, -2).join(' ')}<br><span class="gradient-text">${config.hero_headline.split(' ').slice(-2).join(' ')}</span>`;
+      }
+      
+      const heroSubheading = document.getElementById('hero-subheading');
+      if (heroSubheading) {
+        heroSubheading.textContent = config.hero_subheading;
+      }
+      
+      const registerBtn = document.getElementById('register-btn');
+      if (registerBtn) {
+        const btnSpan = registerBtn.querySelector('span:not(.shimmer-btn)');
+        if (btnSpan) btnSpan.textContent = config.register_button_text;
+      }
+      
+      // Update closing section
+      const closingHeadline = document.getElementById('closing-headline');
+      if (closingHeadline) {
+        const words = config.closing_headline.split(' ');
+        const midPoint = Math.ceil(words.length / 2);
+        closingHeadline.innerHTML = `${words.slice(0, midPoint).join(' ')}<br><span class="gradient-text">${words.slice(midPoint).join(' ')}</span>`;
+      }
+      
+      const closingSubheading = document.getElementById('closing-subheading');
+      if (closingSubheading) {
+        closingSubheading.textContent = config.closing_subheading;
+      }
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => cfg.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => cfg.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => cfg.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => cfg.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => cfg.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
+        ['hero_subheading', cfg.hero_subheading || defaultConfig.hero_subheading],
+        ['register_button_text', cfg.register_button_text || defaultConfig.register_button_text],
+        ['closing_headline', cfg.closing_headline || defaultConfig.closing_headline],
+        ['closing_subheading', cfg.closing_subheading || defaultConfig.closing_subheading]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Form submission handler
+    let formSubmitting = false;
+    document.getElementById('registration-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (formSubmitting) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnArrow = document.getElementById('btn-arrow');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const form = document.getElementById('registration-form');
+      const successMessage = document.getElementById('success-message');
+
+      submitBtn.disabled = true;
+      btnText.textContent = 'Submitting...';
+      btnArrow.classList.add('hidden');
+      btnSpinner.classList.remove('hidden');
+      formSubmitting = true;
+
+      const fd = new FormData(form);
+      fd.set('terms', form.querySelector('#terms').checked ? '1' : '0');
+
+      try {
+        const res = await fetch('submit.php', { method: 'POST', body: fd });
+        const data = await res.json().catch(() => ({ success: false, message: 'Invalid response.' }));
+        if (data.success) {
+          form.classList.add('hidden');
+          successMessage.classList.remove('hidden');
+          showToast(data.message || 'Registration submitted successfully!', 'success');
+        } else {
+          showToast(data.message || 'Submission failed. Please try again.', 'error');
+        }
+      } catch (err) {
+        showToast('Something went wrong. Please try again.', 'error');
+      } finally {
+        formSubmitting = false;
+        submitBtn.disabled = false;
+        btnText.textContent = 'Become a Rahveer Partner';
+        btnArrow.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+      }
+    });
+
+    // Register another button handler
+    document.getElementById('register-another').addEventListener('click', () => {
+      const form = document.getElementById('registration-form');
+      const successMessage = document.getElementById('success-message');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnArrow = document.getElementById('btn-arrow');
+      const btnSpinner = document.getElementById('btn-spinner');
+      
+      form.reset();
+      form.classList.remove('hidden');
+      successMessage.classList.add('hidden');
+      submitBtn.disabled = false;
+      btnText.textContent = 'Become a Rahveer Partner';
+      btnArrow.classList.remove('hidden');
+      btnSpinner.classList.add('hidden');
+      const docInput = document.getElementById('document_upload');
+      if (docInput) docInput.value = '';
+      const docFileName = document.getElementById('document_file_name');
+      if (docFileName) { docFileName.textContent = ''; docFileName.classList.add('hidden'); }
+      const docErr = document.getElementById('document_error');
+      if (docErr) { docErr.textContent = ''; docErr.classList.add('hidden'); }
+    });
+
+    // Mobile: allow only digits, max 10
+    (function() {
+      const mobileInput = document.getElementById('mobile');
+      if (!mobileInput) return;
+      function enforceMobile() {
+        mobileInput.value = mobileInput.value.replace(/\D/g, '').slice(0, 10);
+      }
+      mobileInput.addEventListener('input', enforceMobile);
+      mobileInput.addEventListener('paste', function(e) {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text');
+        mobileInput.value = text.replace(/\D/g, '').slice(0, 10);
+      });
+    })();
+
+    // Document upload: show file name, validate 5 MB and JPG/PNGf
+    (function() {
+      const docInput = document.getElementById('document_upload');
+      const docFileName = document.getElementById('document_file_name');
+      const docError = document.getElementById('document_error');
+      const maxSize = 5 * 1024 * 1024;
+      const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+      if (!docInput) return;
+      docInput.addEventListener('change', function() {
+        if (docError) { docError.textContent = ''; docError.classList.add('hidden'); }
+        if (this.files.length === 0) {
+          if (docFileName) { docFileName.textContent = ''; docFileName.classList.add('hidden'); }
+          return;
+        }
+        const file = this.files[0];
+        if (docFileName) { docFileName.textContent = file.name; docFileName.classList.remove('hidden'); }
+        if (!allowedTypes.includes(file.type)) {
+          if (docError) { docError.textContent = 'Only JPG and PNG are allowed.'; docError.classList.remove('hidden'); }
+          this.value = '';
+          if (docFileName) docFileName.classList.add('hidden');
+          return;
+        }
+        if (file.size > maxSize) {
+          if (docError) { docError.textContent = 'File must be 5 MB or less.'; docError.classList.remove('hidden'); }
+          this.value = '';
+          if (docFileName) docFileName.classList.add('hidden');
+        }
+      });
+    })();
+
+    // Initialize on load
+    initDataSDK();
+  </script>
+ <script>
+ (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');
+ d.innerHTML="window.__CF$cv$params={r:'9d4dff11e255b2d8',t:'MTc3MjI2MTUxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+ b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');
+ a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();
+ else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);
+ else{var e=document.onreadystatechange||
+    function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
