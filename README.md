@@ -15,7 +15,6 @@ Vendor/partner registration portal for **RAHVEER – Zero Accident Bharat**. Pub
 - **Validation** – Server-side checks, unique mobile per vendor, terms acceptance required
 - **UI** – Responsive layout with Tailwind CSS
 
----
 
 ## Tech Stack
 
@@ -24,7 +23,7 @@ Vendor/partner registration portal for **RAHVEER – Zero Accident Bharat**. Pub
 - **Frontend:** HTML, Tailwind CSS (CDN), Poppins font
 - **Auth:** Session-based admin login
 
----
+
 
 ## Project Structure
 
