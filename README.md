@@ -7,7 +7,7 @@ Vendor/partner registration portal for **RAHVEER – Zero Accident Bharat**. Pub
 
 
 
-## Features
+## Features ##
 
 - **Public vendor registration** – Name, shop/business name, mobile, city, service type, optional document (JPG/PNG, max 5 MB)
 - **Service types** – Mechanic, wheel alignment, tyre dealer, driver, medical support, legal advisor, loading service, other
