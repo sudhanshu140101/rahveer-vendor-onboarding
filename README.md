@@ -2,8 +2,8 @@
 
 Vendor/partner registration portal for **RAHVEER – Zero Accident Bharat**. Public registration form, document upload, and admin panel for managing submissions.
 
-**Live:** [https://rahveer.com/](https://rahveer.com/)  
-**Admin:** [https://rahveer.com/admin/login.php](https://rahveer.com/admin/login.php)
+**Live:** [https://roadveer.com/](https://roadveer.com/)  
+**Admin:** [https://roadveer.com/admin/login.php](https://rahveer.com/admin/login.php)
 
 
 
